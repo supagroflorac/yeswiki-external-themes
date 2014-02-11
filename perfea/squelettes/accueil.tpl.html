@@ -1,0 +1,73 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{configuration param="lang"}}"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="{{configuration param="lang"}}"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="{{configuration param="lang"}}"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{configuration param="lang"}}"> <!--<![endif]-->
+<head>
+  <!-- HTML Metas -->
+  <meta charset="{{configuration param="charset"}}">
+  {{metarobots}}
+  <meta name="keywords" content="{{configuration param="meta_keywords"}}" />
+  <meta name="description" content="{{configuration param="meta_description"}}" />
+  <meta name="viewport" content="width=device-width" />
+
+  <!-- Title of the page -->
+  <title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+  
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/x-icon" href="{{configuration param="theme_path"}}images/favicon.ico" />
+  <link rel="apple-touch-icon" href="{{configuration param="theme_path"}}images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="{{configuration param="theme_path"}}images/favicon.png" />
+  
+  {{linkstyle}}
+  {{linkrss}}
+</head>
+
+<body {{parambody}}>
+  <header>
+    <img src="themes/perfea/images/header.jpg" alt="Bandeau PerfEA" />
+  </header>
+
+  <div id="menu">
+    {{moteurrecherche class="pull-right" btnclass="btn-perfea" iconclass="icon"}}
+    {{include page="PageMenuHaut" class="horizontal-dropdown-menu topnavpage" doubleclic="0" actif="1"}} 
+  </div>
+
+  <div id="menugauche">
+    {{include page="pageMenuGauche" class="menugauche" doubleclic="1"}}
+  </div>
+  <div id="page">
+    <div id="page_left" {{doubleclic}}>{WIKINI_PAGE}</div>
+    <div id="page_right">{{include page="pageAccueilDroite" class=" " doubleclic="1"}}</div>
+    <div class="hr_clear"></div>
+  </div>
+  <div class="hr_clear"></div>
+
+  <footer>
+    {{barreredaction}}
+    <div id="footerleft">
+      <img src="themes/perfea/images/LogoSupAgroFlorac.png" alt="Logo SupAgro Florac" /><br />
+      <p>9, rue C&eacute;lestin Freinet<br />
+      48400 Florac<br />
+      T&eacute;l. : +33 4 66 65 65 65<br />
+      contact@colloque-supagroflorac.fr</p>
+    </div>
+    <div id="footercenter">
+      {{contact mail="florac@supagro.inra.fr"}}
+    </div>
+    <div id="footerright">
+      <p>Nous suivre sur les r&eacute;seaux</p>
+      <a href="https://www.facebook.com/SupAgroFlorac"><img src="themes/perfea/images/facebook.png" alt="Facebook" /></a> 
+      <a href="https://www.twitter.com/SupAgroFlorac"><img src="themes/perfea/images/twitter.png" alt="Twitter" /></a>
+      <p>Licences</p>
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="themes/perfea/images/creativecommons.jpe" alt="Creative Commons BY-SA" /></a>
+      <p>Tous les contenus de ce site sont disponibles en licence Creative Commons BY SA.</p>
+
+    </div>
+    <div class="hr_clear"></div>
+    {{include page="PageFooter" class="footerpage" doubleclic="1"}}
+  </footer>
+
+  {{linkjavascript}}
+  </body>
+</html>
